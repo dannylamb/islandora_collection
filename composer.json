@@ -21,7 +21,7 @@
   },
   "require": {
     "drupal/islandora": "dev-composer" 
-  }
+  },
   "authors": [
     {
       "name": "Islandora Foundation",
