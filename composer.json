@@ -9,17 +9,7 @@
     "issues": "https://github.com/islandora-claw/CLAW/issues",
     "irc": "irc://irc.freenode.net/islandora"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/dannylamb/islandora"
-    }
-  ],
-  "require": {
-    "drupal/islandora": "dev-composer"
-  },
   "require-dev": {
-    "phpunit/phpunit": "^4.8",
     "drupal/coder": "*",
     "sebastian/phpcpd": "*"
   },
