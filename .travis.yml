@@ -15,11 +15,6 @@ branches:
   only:
     - /^8.x-1.x/
 
-addons:
-  apt:
-    packages:
-    - activemq
-
 before_install:
   - export ISLANDORA_DIR=$TRAVIS_BUILD_DIR
 
