@@ -1,5 +1,5 @@
 # Islandora Collection
-[![Build Status](https://travis-ci.org/Islandora-CLAW/islandora_collection.png?branch=master)](https://travis-ci.org/Islandora-CLAW/islandora_collection)
+[![Build Status](https://travis-ci.org/Islandora-CLAW/islandora_collection.png?branch=8.x-1.x)](https://travis-ci.org/Islandora-CLAW/islandora_collection)
 [![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](./LICENSE)
 
