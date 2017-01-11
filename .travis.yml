@@ -13,7 +13,7 @@ matrix:
 
 branches:
   only:
-    - /^master/
+    - /^8.x-1.x/
 
 addons:
   apt:
@@ -24,7 +24,6 @@ before_install:
   - export ISLANDORA_DIR=$TRAVIS_BUILD_DIR
 
 install:
-  - printf "no" | pecl install stomp 
   - $TRAVIS_BUILD_DIR/.scripts/travis_setup.sh
   - composer install
   - php vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
