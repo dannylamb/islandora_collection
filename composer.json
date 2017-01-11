@@ -16,17 +16,17 @@
     },
     {
       "type": "vcs",
-      "url": "https://github.com/Islandora-CLAW/islandora"
+      "url": "https://github.com/dannylamb/islandora"
     }
   ],
+  "require": {
+    "islandora/islandora": "dev-add-at-dev"
+  },
   "require-dev": {
     "phpunit/phpunit": "^4.8",
     "squizlabs/php_codesniffer": "2.7.1",
     "drupal/coder": "*",
     "sebastian/phpcpd": "*"
-  },
-  "require": {
-    "islandora/islandora": "dev-8.x-1.x" 
   },
   "authors": [
     {
