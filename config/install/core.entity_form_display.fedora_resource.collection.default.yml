@@ -5,12 +5,26 @@ dependencies:
   config:
     - field.field.fedora_resource.collection.field_description
     - field.field.fedora_resource.collection.field_memberof
+    - field.field.fedora_resource.collection.field_tn
     - islandora.fedora_resource_type.collection
+  enforced:
+    module:
+      - islandora_collection
+_core:
+  default_config_hash: yYDto1vrJ_jyIvZAIdr7CLfiHcgkYGAR3Vq3loeswhE
 id: fedora_resource.collection.default
 targetEntityType: fedora_resource
 bundle: collection
 mode: default
 content:
+  fedora_has_parent:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_description:
     type: string_textarea
     weight: 0
@@ -21,6 +35,46 @@ content:
   field_memberof:
     type: entity_reference_autocomplete
     weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tn:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  langcode:
+    type: language_select
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
