@@ -12,7 +12,7 @@ dependencies:
     module:
       - islandora_collection
 _core:
-  default_config_hash: 8S4nlbeyWLiAe1mGRVJEX1hNY68MiphSr5gjZ3alvuA
+  default_config_hash: geOE76zQGUdCoSp_l50rNHo79aiHVN-_1-9RRBN6Suo
 id: fedora_resource.collection.teaser
 targetEntityType: fedora_resource
 bundle: collection
@@ -26,13 +26,15 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
   name:
     label: above
     type: string
     weight: 1
     settings:
-      link_to_entity: false
+      link_to_entity: true
     third_party_settings: {  }
+    region: content
 hidden:
   field_description: true
   field_memberof: true

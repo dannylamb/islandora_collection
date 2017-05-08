@@ -11,20 +11,12 @@ dependencies:
     module:
       - islandora_collection
 _core:
-  default_config_hash: yYDto1vrJ_jyIvZAIdr7CLfiHcgkYGAR3Vq3loeswhE
+  default_config_hash: T6TIUx0I6IFHvDWApp3EQ_ITp4snZLMRSEebYi9dq-Q
 id: fedora_resource.collection.default
 targetEntityType: fedora_resource
 bundle: collection
 mode: default
 content:
-  fedora_has_parent:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_description:
     type: string_textarea
     weight: 0
@@ -32,6 +24,7 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_memberof:
     type: entity_reference_autocomplete
     weight: 0
@@ -40,6 +33,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   field_tn:
     weight: 26
     settings:
@@ -48,11 +42,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   name:
     type: string_textfield
     weight: -4
@@ -60,18 +56,21 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 15
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 16
     third_party_settings: {  }
+    region: content
   user_id:
     type: entity_reference_autocomplete
     weight: 5
@@ -80,4 +79,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }
