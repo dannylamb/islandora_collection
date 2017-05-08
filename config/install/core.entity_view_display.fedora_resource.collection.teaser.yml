@@ -34,7 +34,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  fedora_has_parent: true
   field_description: true
   field_memberof: true
   user_id: true
