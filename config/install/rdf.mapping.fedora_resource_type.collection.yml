@@ -21,9 +21,6 @@ fieldMappings:
   field_memberof:
     properties:
       - 'pcdm:memberOf'
-  uuid:
-    properties:
-      - 'islandora:hasURN'
   name:
     properties:
       - 'dc:title'
