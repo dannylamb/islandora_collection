@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.fedora_resource.teaser
     - field.field.fedora_resource.collection.field_description
     - field.field.fedora_resource.collection.field_memberof
-    - field.field.fedora_resource.collection.field_tn
     - islandora.fedora_resource_type.collection
   enforced:
     module:
@@ -18,15 +17,6 @@ targetEntityType: fedora_resource
 bundle: collection
 mode: teaser
 content:
-  field_tn:
-    weight: 0
-    label: above
-    settings:
-      view_mode: content
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
   name:
     label: above
     type: string

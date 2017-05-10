@@ -39,7 +39,3 @@ fieldMappings:
     properties:
       - 'schema:author'
     mapping_type: rel
-  field_tn:
-    properties:
-      - 'pcdm:hasRelatedFile'
-    mapping_type: rel
