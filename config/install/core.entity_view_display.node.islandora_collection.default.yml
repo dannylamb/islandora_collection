@@ -1,0 +1,37 @@
+uuid: 5ed92451-586b-40de-b295-eb897c7ff0cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.islandora_collection.field_description
+    - field.field.node.islandora_collection.field_memberof
+    - node.type.islandora_collection
+  module:
+    - user
+  enforced:
+    module:
+      - islandora_collection
+id: node.islandora_collection.default
+targetEntityType: node
+bundle: islandora_collection
+mode: default
+content:
+  field_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_memberof:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 2537515d-860b-4721-b574-9ed8acf60b6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+  enforced:
+    module:
+      - islandora_collection
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Islandora Collection'
+type: islandora_collection
+description: 'Hierarchical collections of content'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

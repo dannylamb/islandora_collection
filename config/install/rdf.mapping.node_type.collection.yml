@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - islandora.fedora_resource_type.collection
+    - node.type.islandora_collection
   module:
     - islandora
   enforced:
     module:
       - islandora_collection
-id: fedora_resource.collection
-targetEntityType: fedora_resource
-bundle: collection
+id: node.islandora_collection
+targetEntityType: node 
+bundle: islandora_collection
 types:
   - 'pcdm:Collection'
   - 'schema:CollectionPage'
@@ -22,7 +22,7 @@ fieldMappings:
     properties:
       - 'pcdm:memberOf'
     mapping_type: rel
-  name:
+  title:
     properties:
       - 'dc:title'
   created:

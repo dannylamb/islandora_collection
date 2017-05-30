@@ -1,0 +1,21 @@
+uuid: 0d57e11c-984a-4817-bd70-31a960db39a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.islandora_collection
+  module:
+    - user
+  enforced:
+    module:
+      - islandora_collection
+id: node.islandora_collection.teaser
+targetEntityType: node
+bundle: islandora_collection
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }
