@@ -8,6 +8,26 @@
 
 Islandora Collection module for Drupal 8.2.x
 
+## Configuration
+
+### Members list 
+
+This module includes a defined view which displays the objects which are a member of the viewed collection.
+
+To enable the supplied members block to collection display follow these steps.
+
+1. Choose **Manage** -> **Structure** -> **Block Layout**
+1. On the Block Layout tab, scroll to the **Main Content** heading and press the **Place Block** button.
+1. On the _Place Block_ overlay, type `member` in the _Filter by block name_ box.
+1. Choose the **Members** block that appears by clicking the **Place Block** button.
+1. Next a _Configure block_ window will appear.
+     1. Set **Content: Member Of** from `- None -` to `Node from URL`.
+     1. Under **Content Types** check `Islandora Collection`.
+     1. Click **Save Block**, this closes the overlay.
+1. Lastly you **must** click **Save blocks** to finish adding this block.
+
+Now if you browse to an Islandora Collection that has a child item, you should see it displayed.
+
 ## Maintainers
 
 Current maintainers:
