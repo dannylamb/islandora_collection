@@ -1,4 +1,3 @@
-
 sudo: true
 language: php
 php:
@@ -22,8 +21,8 @@ install:
   - $SCRIPT_DIR/travis_setup_drupal.sh
   - git -C "$TRAVIS_BUILD_DIR" checkout -b travis-testing
   - cd $DRUPAL_DIR; composer config repositories.local path "$TRAVIS_BUILD_DIR"
-  - composer require "islandora/islandora_collection:dev-travis-testing as dev-8.x-1.x" --prefer-source
-  - cd web; drush en -y islandora_collection
+  - composer require "islandora/islandora_collection:dev-travis-testing as dev-8.x-1.x" --prefer-source --update-with-dependencies
+  - cd web; drush --uri=127.0.0.1:8282 en -y islandora_collection
 
 script:
   - $SCRIPT_DIR/line_endings.sh $TRAVIS_BUILD_DIR
