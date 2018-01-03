@@ -39,13 +39,6 @@ class CollectionLinkHeaderTest extends IslandoraFunctionalTestBase {
   protected $other;
 
   /**
-   * Node with two parents.
-   *
-   * @var \Drupal\node\NodeInterface
-   */
-  protected $twoParents;
-
-  /**
    * {@inheritdoc}
    */
   public function setUp() {
@@ -75,15 +68,6 @@ class CollectionLinkHeaderTest extends IslandoraFunctionalTestBase {
       'field_memberof' => [$this->parent->id()],
     ]);
     $this->child->save();
-
-    // Create a node that belongs to two others.
-    $this->twoParents = $this->container->get('entity_type.manager')->getStorage('node')->create([
-      'type' => 'islandora_collection',
-      'title' => 'Two parents',
-      'field_description' => 'Has two parents',
-      'field_memberof' => [$this->parent->id(), $this->other->id()],
-    ]);
-    $this->twoParents->save();
   }
 
   /**
@@ -109,18 +93,6 @@ class CollectionLinkHeaderTest extends IslandoraFunctionalTestBase {
     // Visit the child.  It should return one rel="collection" link header
     // pointing to the parent.
     $this->drupalGet('node/' . $this->child->id());
-    $this->assertTrue(
-      $this->validateLinkHeader('collection', $this->parent) == 1,
-      "Malformed collection header"
-    );
-
-    // Visit the node with two parents.  It should return a rel="collection"
-    // link header for each parent.
-    $this->drupalGet('node/' . $this->twoParents->id());
-    $this->assertTrue(
-      $this->validateLinkHeader('collection', $this->parent) == 1,
-      "Malformed collection header"
-    );
     $this->assertTrue(
       $this->validateLinkHeader('collection', $this->parent) == 1,
       "Malformed collection header"
