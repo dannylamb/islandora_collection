@@ -1,0 +1,3 @@
+services:
+  islandora_collection.view_alter.collection_link_header:
+    class: Drupal\islandora_collection\ViewAlter\CollectionLinkHeader

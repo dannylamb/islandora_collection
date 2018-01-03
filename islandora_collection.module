@@ -2,9 +2,10 @@
 
 /**
  * @file
- * Contains islandora_collection.module..
+ * Contains islandora_collection hook implementations.
  */
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -21,4 +22,12 @@ function islandora_collection_help($route_name, RouteMatchInterface $route_match
 
     default:
   }
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function islandora_collection_node_view_alter(&$build, EntityInterface $entity) {
+  \Drupal::service('islandora_collection.view_alter.collection_link_header')
+    ->alter($build, $entity);
 }
