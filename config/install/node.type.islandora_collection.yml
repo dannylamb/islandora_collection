@@ -7,11 +7,6 @@ dependencies:
   enforced:
     module:
       - islandora_collection
-third_party_settings:
-  menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
 name: 'Islandora Collection'
 type: islandora_collection
 description: 'Hierarchical collections of content'
